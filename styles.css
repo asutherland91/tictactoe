@@ -3,10 +3,8 @@ body {
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.536);
   font-family: 'New Super Mario Font U', sans-serif;
   color: white;
-  text-shadow: 3px 3px 3px #e4000f ;
-                                                
+  text-shadow: 3px 3px 3px #E4000F ;
 }
-
 .game-board-section {
   margin: 0px;
   height: 60%;
@@ -15,36 +13,30 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
-
 .game-board-pieces {
-  border: 2px solid #e4000f;
+  border: 2px solid #E4000F;
   height: 100%;
   width: 100%;
 }
-
 .wrapper {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-
 .radio-section {
   width: 150px;
   height: 150px;
 }
-
 .radio-section img {
   width: 100%;
   height: 100%;
 }
-
 ::placeholder {
   font-family: 'New Super Mario Font U', sans-serif;
 }
-
 button {
   font-family: 'New Super Mario Font U', sans-serif;
-  background-color: #e4000f;
+  background-color: #E4000F;
   color: white;
   border-radius: 6px;
 }
