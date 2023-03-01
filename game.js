@@ -19,6 +19,7 @@ class Game {
       this.gameWon = false;
       this.gameDraw = false;
       this.gameState = ["spot 0", "spot 1", "spot 2", "spot 3", "spot 4", "spot 5", "spot 6", "spot 7",  "spot 8"];
+      this.turn = 0;
     }
   }
 
@@ -75,7 +76,7 @@ class Game {
       this.gameState[spot] = this.currentPlayer.id;
       this.turn++;
       this.checkGameState();
-      
+
       if(this.currentPlayer === this.player1) {
         this.currentPlayer = this.player2;
       }

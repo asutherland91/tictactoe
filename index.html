@@ -16,22 +16,23 @@
         <form class="selection-section">
           <input type="text" class="name-input" id="name-input1" placeholder="Enter your name">
           <div class="radio-section">
-            <input type="radio" id="mario" name="player-piece" value="mario">
+            <input type="radio" class="radio-one" id="mario" name="player-piece-1" value="mario">
             <label for="mario"><img class="player-icons" src="assets/Mario.png" alt="Mario"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" id="luigi" name="player-piece" value="luigi">
+            <input type="radio" class="radio-one"  id="luigi" name="player-piece-1" value="luigi">
             <label for="luigi"><img class="player-icons" src="assets/Luigi.webp" alt="Luigi"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" id="peach" name="player-piece" value="peach">
+            <input type="radio" class="radio-one"  id="peach" name="player-piece-1" value="peach">
             <label for="peach"><img class="player-icons" src="assets/Peach.png" alt="Peach"/></label>
         </div>
         <div class="radio-section">
-            <input type="radio" id="yoshi" name="player-piece" value="yoshi">
+            <input type="radio" class="radio-one"  id="yoshi" name="player-piece-1" value="yoshi">
             <label for="yoshi"><img class="player-icons" src="assets/Yoshi.png" alt="Yoshi"/></label>
           </div> 
-          <button disabled class="submit">LET'S A GO!</button>
+          <button disabled class="submit-1">LET'S A GO!</button>
+        </form>
       </section>
       <section class="middle-section">
         <img class="super-header" src="assets/Supertictactoe.png" alt="Super Tic Tac Toe"/>
@@ -47,7 +48,7 @@
             <div class="mid-3 game-board-pieces" id="mid-3"></div>
             <div class="right-3 game-board-pieces" id="right-3"></div>
         </section>
-        <h2 class="hidden">Player Won!</h2>
+        <h2 class="hidden player-won">Player Won!</h2>
       </section>
       <section class="side-bar right-side">
         <h3>Player 2</h3>
@@ -56,23 +57,25 @@
         <form class="selection-section">
           <input type="text" class="name-input" id="name-input2" placeholder="Enter your name">
           <div class="radio-section">
-            <input type="radio" id="bowser" name="player-piece" value="bowser">
+            <input type="radio" class="radio-two" id="bowser" name="player-piece-2" value="bowser">
             <label for="bowser"><img class="player-icons" src="assets/Bowser.webp" alt="Bowser"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" id="boo" name="player-piece" value="boo">
+            <input type="radio" class="radio-two" id="boo" name="player-piece-2" value="boo">
             <label for="boo"><img class="player-icons" src="assets/Boo.webp" alt="Boo"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" id="goomba" name="player-piece" value="goomba">
+            <input type="radio" class="radio-two" id="goomba" name="player-piece-2" value="goomba">
             <label for="goomba"><img class="player-icons" src="assets/Goomba.png" alt="Goomba"/></label>
-        </div>
-        <div class="radio-section">
-            <input type="radio" id="spiny" name="player-piece" value="spiny">
+          </div>
+          <div class="radio-section">
+            <input type="radio" class="radio-two" id="spiny" name="player-piece-2" value="spiny">
             <label for="spiny"><img class="player-icons" src="assets/Spiny.png" alt="Spiny"/></label>
-          </div> 
-          <button disabled class="submit">LET'S A GO!</button>
+           </div> 
+          <button disabled class="submit-2">LET'S A GO!</button>
+        </form>
       </section>
     </section>
+    <script src="./main.js"></script>
   </body>
 </html>
