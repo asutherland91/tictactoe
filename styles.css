@@ -1,52 +1,57 @@
 *{
 margin: 0;
+margin-block-start: 0px;
+margin-block-end: 0px;
 }
 
 body {
-  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.536);
-  background-image: url("assets/background.png") ;
-  background-size: 87%;
+  background: url("assets/background.png") no-repeat center center fixed;
+  background-size: cover;
   font-family: 'New Super Mario Font U', sans-serif;
   color: white;
   text-shadow: 3px 3px 3px #E4000F ;
 }
 
 .wrapper {
+  background-color: rgba(255,255,255,.5);
   display: flex;
-  width: 100%;
   justify-content: space-between;
-}
-
-.super-header {
-  height: 6%;
+  width: 100%;
+  height: 100vh;
 }
 
 h1 {
-
+  font-size: 50px;
+  margin-top: 40px;
 }
 
 h2 {
-
+  font-size: 64px;
 }
 
 h3 {
-
+  font-size: 42px;
+  padding: 10px;
 }
 
 h4 {
-  
+  font-size: 32px;
+  padding:10px;
 }
-
 
 /* GAME BOARD DESIGN */
 .middle-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 }
+
+.super-header {
+  margin-top: 40px
+}
+
 .game-board-section {
-  margin: 0px;
+  margin-top: 40px;
   max-width: 65%;
   max-height: 65%;
   display: grid;
@@ -75,26 +80,61 @@ h4 {
   border-bottom: 0px;
 }
 
+/* Side bar area */
+.name-input {
+  font-size:larger;
+  margin: 10px;
+}
+
+::placeholder {
+  font-family: 'New Super Mario Font U', sans-serif;
+}
+
+hr {
+  border: 1px solid #FCD000;
+  width: 100%;
+}
+
+.left-side {
+  border-right: 3px solid #FCD000;
+}
+
+.right-side {
+  border-left:3px solid #FCD000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .radio-section {
   width: 115px;
   height: 115px;
-  padding: 5px
 }
+
 .radio-section img {
   width: 100%;
   height: 100%;
 }
-::placeholder {
-  font-family: 'New Super Mario Font U', sans-serif;
-}
+
 button {
   font-family: 'New Super Mario Font U', sans-serif;
   font-size: larger;
   cursor: pointer;
   background-color: #E4000F;
   color: white;
-  border: 2px white;
   border-radius: 6px;
   padding: 10px;
-  margin-top: 40px;
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button:disabled {
+  background-color:#e4000f6c;
+  color: rgb(172, 172, 172);
+  cursor: default;
+}
+
+.hidden {
+  display: none;
 }
