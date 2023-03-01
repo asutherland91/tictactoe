@@ -1,31 +1,84 @@
+*{
+margin: 0;
+}
+
 body {
+  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.536);
   background-image: url("assets/background.png") ;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.536);
+  background-size: 87%;
   font-family: 'New Super Mario Font U', sans-serif;
   color: white;
   text-shadow: 3px 3px 3px #E4000F ;
 }
-.game-board-section {
-  margin: 0px;
-  height: 60%;
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.game-board-pieces {
-  border: 2px solid #E4000F;
-  height: 100%;
-  width: 100%;
-}
+
 .wrapper {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.radio-section {
-  width: 150px;
+
+.super-header {
+  height: 6%;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+  
+}
+
+
+/* GAME BOARD DESIGN */
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.game-board-section {
+  margin: 0px;
+  max-width: 65%;
+  max-height: 65%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.game-board-pieces {
+  border: 4px solid #E4000F;
   height: 150px;
+  width: 150px;
+}
+
+.left-1, .left-2, .left-3 {
+  border-left: 0px;
+}
+
+.left-1, .mid-1, .right-1 {
+  border-top: 0px;
+}
+
+.right-1, .right-2, .right-3 {
+  border-right: 0px;
+}
+
+.left-3, .mid-3, .right-3 {
+  border-bottom: 0px;
+}
+
+.radio-section {
+  width: 115px;
+  height: 115px;
+  padding: 5px
 }
 .radio-section img {
   width: 100%;
@@ -36,7 +89,12 @@ body {
 }
 button {
   font-family: 'New Super Mario Font U', sans-serif;
+  font-size: larger;
+  cursor: pointer;
   background-color: #E4000F;
   color: white;
+  border: 2px white;
   border-radius: 6px;
+  padding: 10px;
+  margin-top: 40px;
 }

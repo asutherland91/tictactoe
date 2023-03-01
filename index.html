@@ -6,77 +6,73 @@
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <section class="wrapper">
-      <section class="side-bar left-side">
-        <h3>Player 1</h3>
-        <h4>Player 1 score</h4>
-        <hr class="solid">
-        <form class="selection-section">
-          <input type="text" class="name-input" id="name-input" placeholder="Enter your name">
-          <div class="radio-section">
-            <input type="radio" id="mario" name="player-piece" value="mario">
-            <label for="mario"><img class="player-icons" src="assets/Mario.png" alt="Mario"/></label>
+    <div class="background-layer">
+      <section class="wrapper">
+        <section class="side-bar left-side">
+          <h3>Player 1</h3>
+          <h4>Player 1 score</h4>
+          <hr class="solid">
+          <form class="selection-section">
+            <input type="text" class="name-input" id="name-input" placeholder="Enter your name">
+            <div class="radio-section">
+              <input type="radio" id="mario" name="player-piece" value="mario">
+              <label for="mario"><img class="player-icons" src="assets/Mario.png" alt="Mario"/></label>
+            </div>
+            <div class="radio-section">
+              <input type="radio" id="luigi" name="player-piece" value="luigi">
+              <label for="luigi"><img class="player-icons" src="assets/Luigi.webp" alt="Luigi"/></label>
+            </div>
+            <div class="radio-section">
+              <input type="radio" id="peach" name="player-piece" value="peach">
+              <label for="peach"><img class="player-icons" src="assets/Peach.png" alt="Peach"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" id="luigi" name="player-piece" value="luigi">
-            <label for="luigi"><img class="player-icons" src="assets/Luigi.webp" alt="Luigi"/></label>
-          </div>
-          <div class="radio-section">
-            <input type="radio" id="peach" name="player-piece" value="peach">
-            <label for="peach"><img class="player-icons" src="assets/Peach.png" alt="Peach"/></label>
-        </div>
-        <div class="radio-section">
-            <input type="radio" id="yoshi" name="player-piece" value="yoshi">
-            <label for="yoshi"><img class="player-icons" src="assets/Yoshi.png" alt="Yoshi"/></label>
-          </div> 
-          <button disabled class="submit">LET'S A GO!</button>
-      </section>
-      <section class="middle-section">
-        <img class="super-header" src="assets/Supertictactoe.png" alt="Super Tic Tac Toe"/>
-        <h1>Player's Turn!</h1>
-        <section class="game-board-section">
-          <section class="top-row">
-            <div class="left-1 game-board-pieces"></div>
-            <div class="mid-1 game-board-pieces"></div>
-            <div class="right-1 game-board-pieces"></div>
-          </section>
-          <section class="middle-row">
-            <div class="left-2 game-board-pieces"></div>
-            <div class="mid-2 game-board-pieces"></div>
-            <div class="right-2 game-board-pieces"></div>
-          </section>
-          <section class="bottom-row">
-            <div class="left-3 game-board-pieces"></div>
-            <div class="mid-3 game-board-pieces"></div>
-            <div class="right-3 game-board-pieces"></div>
-          </section>
+              <input type="radio" id="yoshi" name="player-piece" value="yoshi">
+              <label for="yoshi"><img class="player-icons" src="assets/Yoshi.png" alt="Yoshi"/></label>
+            </div> 
+            <button disabled class="submit">LET'S A GO!</button>
         </section>
-        <h2>Player Won!</h2>
-      </section>
-      <section class="side-bar right-side">
-        <h3>Player 2</h3>
-        <h4>Player 1 score</h4>
-        <hr class="solid>"
-        <form class="selection-section">
-          <input type="text" class="name-input" id="name-input" placeholder="Enter your name">
-          <div class="radio-section">
-            <input type="radio" id="bowser" name="player-piece" value="bowser">
-            <label for="bowser"><img class="player-icons" src="assets/Bowser.webp" alt="Bowser"/></label>
+        <section class="middle-section">
+          <img class="super-header" src="assets/Supertictactoe.png" alt="Super Tic Tac Toe"/>
+          <h1>Player's Turn!</h1>
+          <section class="game-board-section">
+              <div class="left-1 game-board-pieces" id="left-1"></div>
+              <div class="mid-1 game-board-pieces" id="mid-1"></div>
+              <div class="right-1 game-board-pieces" id="right-1"></div>
+              <div class="left-2 game-board-pieces" id="left-2"></div>
+              <div class="mid-2 game-board-pieces" id="mid-2"></div>
+              <div class="right-2 game-board-pieces" id="right-2"></div>
+              <div class="left-3 game-board-pieces" id="left-3"></div>
+              <div class="mid-3 game-board-pieces" id="mid-3"></div>
+              <div class="right-3 game-board-pieces" id="right-3"></div>
+          </section>
+          <h2>Player Won!</h2>
+        </section>
+        <section class="side-bar right-side">
+          <h3>Player 2</h3>
+          <h4>Player 1 score</h4>
+          <hr class="solid>">
+          <form class="selection-section">
+            <input type="text" class="name-input" id="name-input" placeholder="Enter your name">
+            <div class="radio-section">
+              <input type="radio" id="bowser" name="player-piece" value="bowser">
+              <label for="bowser"><img class="player-icons" src="assets/Bowser.webp" alt="Bowser"/></label>
+            </div>
+            <div class="radio-section">
+              <input type="radio" id="boo" name="player-piece" value="boo">
+              <label for="boo"><img class="player-icons" src="assets/Boo.webp" alt="Boo"/></label>
+            </div>
+            <div class="radio-section">
+              <input type="radio" id="goomba" name="player-piece" value="goomba">
+              <label for="goomba"><img class="player-icons" src="assets/Goomba.png" alt="Goomba"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" id="boo" name="player-piece" value="boo">
-            <label for="boo"><img class="player-icons" src="assets/Boo.webp" alt="Boo"/></label>
-          </div>
-          <div class="radio-section">
-            <input type="radio" id="goomba" name="player-piece" value="goomba">
-            <label for="goomba"><img class="player-icons" src="assets/Goomba.png" alt="Goomba"/></label>
-        </div>
-        <div class="radio-section">
-            <input type="radio" id="spiny" name="player-piece" value="spiny">
-            <label for="spiny"><img class="player-icons" src="assets/Spiny.png" alt="Spiny"/></label>
-          </div> 
-          <button disabled class="submit">LET'S A GO!</button>
+              <input type="radio" id="spiny" name="player-piece" value="spiny">
+              <label for="spiny"><img class="player-icons" src="assets/Spiny.png" alt="Spiny"/></label>
+            </div> 
+            <button disabled class="submit">LET'S A GO!</button>
+        </section>
       </section>
-    </section>
+    </div>
   </body>
 </html>
