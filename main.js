@@ -27,6 +27,7 @@ var nameOne = document.querySelector(".name-one");
 var scoreOne = document.querySelector(".score-one");
 var nameTwo = document.querySelector(".name-two");
 var scoreTwo = document.querySelector(".score-two");
+var gameBoard = document.querySelectorAll(".game-board-pieces");
 
 //event listeners
 nameInputOne.addEventListener("keyup", enableOneButton);
@@ -39,9 +40,13 @@ for(var i = 0; i < radioOne.length; i++) {
 for(var i = 0; i < radioTwo.length; i++) {
   radioTwo[i].addEventListener("click", enableTwoButton);
 }
+for(var i = 0; i < gameBoard.length; i++) {
+  gameBoard[i].addEventListener("click", placeIcon);
+}
 
 var playerOne;
 var playerTwo;
+var game;
 
 //functions
 
@@ -59,11 +64,20 @@ function setUpPlayer(event) {
     nameTwo.innerHTML = playerTwo.name;
     scoreTwo.innerHTML = playerTwo.wins;
   }
+  startGame();
+}
+
+function startGame() {
+  if(playerOne && playerTwo) {
+    game = new Game(playerOne, playerTwo)
+  }
 }
 
 function placeIcon(event) {
-  if(event.target.className === "board-game-pieces") {
-    var iconPlacement = event.target.parentNode;
+  if(game) {
+    event.target.innerHTML = `<img class="player-icons" src="${game.currentPlayer.token}" alt="${game.currentPlayer.name}'s piece"/>`
+    var spot = event.target.id[5];
+    game.takeTurn(spot);
   }
 }
 

@@ -69,6 +69,8 @@ h4 {
   width: 150px;
 }
 
+
+
 .left-1, .left-2, .left-3 {
   border-left: 0px;
 }
@@ -122,7 +124,12 @@ hr {
   height: 115px;
 }
 
-.radio-section img {
+.radio-section .player-icons {
+  width: 100%;
+  height: 100%;
+}
+
+.game-board-pieces .player-icons {
   width: 100%;
   height: 100%;
 }
