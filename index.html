@@ -33,11 +33,12 @@
           </div> 
           <button disabled class="submit-1">LET'S A GO!</button>
         </form>
+          <img class="margif hidden" src="assets/margif.gif">
       </section>
       <section class="middle-section">
         <img class="super-header" src="assets/Supertictactoe.png" alt="Super Tic Tac Toe"/>
-        <h1>Player's Turn!</h1>
-        <section class="game-board-section">
+        <h1 class="hidden">Player's Turn!</h1>
+        <section class="game-board-section hidden">
             <div class="left-1 game-board-pieces" id="spot-0"></div>
             <div class="mid-1 game-board-pieces" id="spot-1"></div>
             <div class="right-1 game-board-pieces" id="spot-2"></div>
@@ -48,7 +49,8 @@
             <div class="mid-3 game-board-pieces" id="spot-7"></div>
             <div class="right-3 game-board-pieces" id="spot-8"></div>
         </section>
-        <h2 class="hidden player-won">Player Won!</h2>
+        <h2 class="player-won">Please choose a player!</h2>
+        <img class="winner hidden" src="assets/winner.gif">
       </section>
       <section class="side-bar right-side-bar">
         <h3 class="name-two">Player 2</h3>
@@ -74,6 +76,7 @@
            </div> 
           <button disabled class="submit-2">LET'S A GO!</button>
         </form>
+          <img class="bowgif hidden" src="assets/bowgif.gif">
       </section>
     </section>
     <script src="./main.js"></script>

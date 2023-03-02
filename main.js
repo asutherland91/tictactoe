@@ -3,7 +3,6 @@ var nameInputOne = document.querySelector("#name-input1");
 var nameInputTwo = document.querySelector("#name-input2");
 var letsGoButtonOne = document.querySelector(".submit-1");
 var letsGoButtonTwo = document.querySelector(".submit-2");
-var playerWon = document.querySelector(".player-won");
 var radioOne = document.querySelectorAll(".radio-one");
 var radioTwo = document.querySelectorAll(".radio-two");
 var nameOne = document.querySelector(".name-one");
@@ -14,6 +13,10 @@ var gameBoardWrapper = document.querySelector(".game-board-section")
 var gameBoard = document.querySelectorAll(".game-board-pieces");
 var header = document.querySelector("h1");
 var gameResult = document.querySelector("h2");
+var selectionSection = document.querySelectorAll(".selection-section")
+var marioGif = document.querySelector(".margif");
+var bowserGif = document.querySelector(".bowgif");
+var winner = document.querySelector(".winner");
 
 //event listeners
 nameInputOne.addEventListener("keyup", enableOneButton);
@@ -35,6 +38,11 @@ var playerTwo;
 var game;
 
 //functions
+function hideSideBar() {
+  for(var i = 0; i < icons.length; i++ ) {
+    selectionSection[i].classList.add("hidden")
+  }
+}
 
 function setUpPlayer(event) {
   event.preventDefault();
@@ -43,19 +51,29 @@ function setUpPlayer(event) {
     playerOne = new Player(nameInputOne.value, playerIconOne);
     nameOne.innerHTML = playerOne.name;
     scoreOne.innerHTML = playerOne.wins;
+    var playerOneSection = document.querySelector(".left-side .selection-section");
+    playerOneSection.classList.add("hidden");
+    marioGif.classList.remove("hidden");
   }
   else if(event.target.classList.contains("submit-2")) {
     var playerIconTwo = document.querySelector("input[name=player-piece-2]:checked").value;
     playerTwo = new Player(nameInputTwo.value, playerIconTwo);
     nameTwo.innerHTML = playerTwo.name;
     scoreTwo.innerHTML = playerTwo.wins;
+    var playerTwoSection = document.querySelector(".right-side");
+    playerTwoSection.classList.add("hidden");
+    bowserGif.classList.remove("hidden");
   }
   startGame();
 }
 
 function startGame() {
   if(playerOne && playerTwo) {
+    gameResult.classList.add("hidden");
+    gameBoardWrapper.classList.remove("hidden");
+    header.classList.remove("hidden");
     game = new Game(playerOne, playerTwo);
+   
     bannerChangeTurns();
   }
 }
@@ -72,12 +90,22 @@ function boardChangeGameState() {
     gameResult.classList.remove("hidden");
     if(game.currentPlayer == playerOne) {
       scoreOne.innerHTML = playerOne.wins;
+      winner.classList.remove("hidden");
     }
     else if(game.currentPlayer == playerTwo) {
       scoreTwo.innerHTML = playerTwo.wins;
+      winner.classList.remove("hidden");
     }
-    setTimeout(resetGameBoard, 2000);
+    setTimeout(resetGameBoard, 1800);
   }
+  else if(game.gameDraw) {
+    gameBoardWrapper.classList.add("hidden");
+    header.classList.add("hidden");
+    gameResult.innerHTML = `Draw!`;
+    gameResult.classList.remove("hidden");
+    setTimeout(resetGameBoard, 1800);
+  }
+  game.changeTurn();
 }
 
   function resetGameBoard() {
@@ -87,6 +115,7 @@ function boardChangeGameState() {
     }
     gameResult.classList.add("hidden");
     header.classList.remove("hidden");
+    winner.classList.add("hidden")
     gameBoardWrapper.classList.remove("hidden");
     bannerChangeTurns();
     game.resetGame();
@@ -100,8 +129,7 @@ function placeIcon(event) {
     if(legalTurn) {
       event.target.innerHTML = `<img class="player-icons" src="${game.currentPlayer.token}" alt="${game.currentPlayer.name}'s piece"/>`
       if(game.gameWon||game.gameDraw) {
-        boardChangeGameState();
-        game.changeTurn();
+        setTimeout(boardChangeGameState, 400);
       }
       else {
         game.changeTurn();
