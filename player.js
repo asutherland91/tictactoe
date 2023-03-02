@@ -1,12 +1,11 @@
 class Player {
-  constructor(id, name, token) {
-    this.id = id;
+  constructor(name, token) {
     this.name = name;
     this.token = token;
     this.wins = 0;
   }
 
   increaseWins() {
-    this.win++;
+    this.wins++;
   }
 }

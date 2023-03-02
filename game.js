@@ -19,6 +19,7 @@ class Game {
       this.gameWon = false;
       this.gameDraw = false;
       this.gameState = ["spot 0", "spot 1", "spot 2", "spot 3", "spot 4", "spot 5", "spot 6", "spot 7",  "spot 8"];
+      this.turn = 0;
     }
   }
 
@@ -26,63 +27,57 @@ class Game {
     if(this.gameState[0] === this.gameState[1] && this.gameState[0] === this.gameState[2]) {
       this.gameWon = true;
       this.currentPlayer.increaseWins();
-      setTimeout(resetGame(), 200);
     }
     else if(this.gameState[3] === this.gameState[4] && this.gameState[3] === this.gameState[5]) {
       this.gameWon = true;
       this.currentPlayer.increaseWins();
-      setTimeout(resetGame(), 200);
     }
     else if(this.gameState[6] === this.gameState[7] && this.gameState[6] === this.gameState[8]) {
       this.gameWon = true;
       this.currentPlayer.increaseWins();
-      setTimeout(resetGame(), 200);
     }
     else if(this.gameState[0] === this.gameState[3] && this.gameState[0] === this.gameState[6]) {
       this.gameWon = true;
       this.currentPlayer.increaseWins();
-      setTimeout(resetGame(), 200);
     }
     else if(this.gameState[1] === this.gameState[4] && this.gameState[1] === this.gameState[7]) {
       this.gameWon = true;
       this.currentPlayer.increaseWins();
-      setTimeout(resetGame(), 200);
     }
     else if(this.gameState[2] === this.gameState[5] && this.gameState[2] === this.gameState[8]) {
       this.gameWon = true;
       this.currentPlayer.increaseWins();
-      setTimeout(resetGame(), 200);
     }
     else if(this.gameState[0] === this.gameState[4] && this.gameState[0] === this.gameState[8]) {
       this.gameWon = true;
       this.currentPlayer.increaseWins();
-      setTimeout(resetGame(), 200);
     }
     else if(this.gameState[6] === this.gameState[4] && this.gameState[6] === this.gameState[2]) {
       this.gameWon = true;
       this.currentPlayer.increaseWins();
-      setTimeout(resetGame(), 200);
     }
     else if(this.turn === 9) {
       this.gameDraw = true;
-      setTimeout(resetGame(), 200);
     }
 
   }
 
   takeTurn(spot) {
-    if(!this.gameState[spot] === this.player1.id||this.player2.id) {
-      this.gameState[spot] = this.currentPlayer.id;
+    if(this.gameState[spot] !== this.player1.name && this.gameState[spot] !== this.player2.name) {
+      this.gameState[spot] = this.currentPlayer.name;
       this.turn++;
       this.checkGameState();
-      
-      if(this.currentPlayer === this.player1) {
-        this.currentPlayer = this.player2;
-      }
-      else {
-        this.currentPlayer = this.player1;
-      }
+      return true;
     }
+    return false;
   }
 
+  changeTurn() {
+    if(this.currentPlayer === this.player1) {
+      this.currentPlayer = this.player2;
+    }
+    else {
+      this.currentPlayer = this.player1;
+    }
+  }
 }
