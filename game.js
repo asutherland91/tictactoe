@@ -72,8 +72,8 @@ class Game {
   }
 
   takeTurn(spot) {
-    if(!this.gameState[spot] === this.player1.id||this.player2.id) {
-      this.gameState[spot] = this.currentPlayer.id;
+    if(!this.gameState[spot] === this.player1.name||this.player2.name) {
+      this.gameState[spot] = this.currentPlayer.name;
       this.turn++;
       this.checkGameState();
 

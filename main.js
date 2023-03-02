@@ -23,11 +23,16 @@ var rightThree = document.querySelector(".right-3");
 var playerWon = document.querySelector(".player-won");
 var radioOne = document.querySelectorAll(".radio-one");
 var radioTwo = document.querySelectorAll(".radio-two");
-
+var nameOne = document.querySelector(".name-one");
+var scoreOne = document.querySelector(".score-one");
+var nameTwo = document.querySelector(".name-two");
+var scoreTwo = document.querySelector(".score-two");
 
 //event listeners
 nameInputOne.addEventListener("keyup", enableOneButton);
 nameInputTwo.addEventListener("keyup", enableTwoButton);
+letsGoButtonOne.addEventListener("click", setUpPlayer);
+letsGoButtonTwo.addEventListener("click", setUpPlayer);
 for(var i = 0; i < radioOne.length; i++) {
   radioOne[i].addEventListener("click", enableOneButton);
 }
@@ -35,25 +40,32 @@ for(var i = 0; i < radioTwo.length; i++) {
   radioTwo[i].addEventListener("click", enableTwoButton);
 }
 
-
-
 var playerOne;
 var playerTwo;
-
 
 //functions
 
 function setUpPlayer(event) {
   event.preventDefault();
-  var playerIcon = document.querySelector("input[name=player-piece]:checked").value;
-  if(playerIcon === "mario"||"luigi"||"peach"||"yoshi") {
-    playerOne = new Player(nameInputOne.value, playerIcon);
+  if(event.target.classList.contains("submit-1")) {
+    var playerIconOne = document.querySelector("input[name=player-piece-1]:checked").value;
+    playerOne = new Player(nameInputOne.value, playerIconOne);
+    nameOne.innerHTML = playerOne.name;
+    scoreOne.innerHTML = playerOne.wins;
   }
-  else {
-    playerTwo = new Player(nameInputTwo.value, playerIcon);
+  else if(event.target.classList.contains("submit-2")) {
+    var playerIconTwo = document.querySelector("input[name=player-piece-2]:checked").value;
+    playerTwo = new Player(nameInputTwo.value, playerIconTwo);
+    nameTwo.innerHTML = playerTwo.name;
+    scoreTwo.innerHTML = playerTwo.wins;
   }
 }
 
+function placeIcon(event) {
+  if(event.target.className === "board-game-pieces") {
+    var iconPlacement = event.target.parentNode;
+  }
+}
 
 function enableOneButton() {
   var playerIcon = document.querySelector("input[name=player-piece-1]:checked");

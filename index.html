@@ -4,14 +4,14 @@
     <title>Super Tic Tac Toe!</title>
     <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-    <script src="./game.js"></script>
     <script src="./player.js"></script>
+    <script src="./game.js"></script>
   </head>
   <body>
     <section class="wrapper">
       <section class="side-bar left-side">
-        <h3>Player 1</h3>
-        <h4>Player 1 score</h4>
+        <h3 class="name-one">Player 1</h3>
+        <h4 class="score-one">Player 1 score</h4>
         <hr class="solid">
         <form class="selection-section">
           <input type="text" class="name-input" id="name-input1" placeholder="Enter your name">
@@ -50,11 +50,11 @@
         </section>
         <h2 class="hidden player-won">Player Won!</h2>
       </section>
-      <section class="side-bar right-side">
-        <h3>Player 2</h3>
-        <h4>Player 1 score</h4>
+      <section class="side-bar right-side-bar">
+        <h3 class="name-two">Player 2</h3>
+        <h4 class="score-two">Player 2 score</h4>
         <hr class="solid>">
-        <form class="selection-section">
+        <form class="selection-section right-side">
           <input type="text" class="name-input" id="name-input2" placeholder="Enter your name">
           <div class="radio-section">
             <input type="radio" class="radio-two" id="bowser" name="player-piece-2" value="bowser">

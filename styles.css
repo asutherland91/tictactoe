@@ -1,3 +1,8 @@
+/* colors
+#42B132 - green
+#E4000F - red
+#FCD000 - yellow */
+
 *{
 margin: 0;
 margin-block-start: 0px;
@@ -91,7 +96,7 @@ h4 {
 }
 
 hr {
-  border: 1px solid #FCD000;
+  border: 1px solid #42B132;
   width: 100%;
 }
 
@@ -99,8 +104,14 @@ hr {
   border-right: 3px solid #FCD000;
 }
 
+.right-side-bar {
+  border-left:3px solid #42B132;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .right-side {
-  border-left:3px solid #FCD000;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
