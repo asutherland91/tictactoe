@@ -31,7 +31,8 @@ h1 {
 }
 
 h2 {
-  font-size: 64px;
+  margin-top: 80px;
+  font-size: 80px;
 }
 
 h3 {
@@ -68,8 +69,6 @@ h4 {
   height: 150px;
   width: 150px;
 }
-
-
 
 .left-1, .left-2, .left-3 {
   border-left: 0px;
