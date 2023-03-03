@@ -3,6 +3,7 @@ class Game {
     this.gameWon = false;
     this.gameDraw = false;
     this.currentPlayer = player1;
+    this.startingPlayer = player1;
     this.player1 = player1;
     this.player2 = player2;
     this.gameState = ["spot 0", "spot 1", "spot 2", "spot 3", "spot 4", "spot 5", "spot 6", "spot 7",  "spot 8"];
@@ -20,6 +21,14 @@ class Game {
       this.gameDraw = false;
       this.gameState = ["spot 0", "spot 1", "spot 2", "spot 3", "spot 4", "spot 5", "spot 6", "spot 7",  "spot 8"];
       this.turn = 0;
+      if(this.startingPlayer === this.player1) {
+        this.currentPlayer = this.player2;
+        this.startingPlayer = this.player2;
+      }
+      else if (this.startingPlayer === this.player2) {
+        this.currentPlayer = this.player1;
+        this.startingPlayer = this.player1;
+      }
     }
   }
 
@@ -63,8 +72,8 @@ class Game {
   }
 
   takeTurn(spot) {
-    if(this.gameState[spot] !== this.player1.name && this.gameState[spot] !== this.player2.name) {
-      this.gameState[spot] = this.currentPlayer.name;
+    if(this.gameState[spot] !== this.player1.id && this.gameState[spot] !== this.player2.id) {
+      this.gameState[spot] = this.currentPlayer.id;
       this.turn++;
       this.checkGameState();
       return true;

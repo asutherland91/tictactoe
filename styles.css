@@ -33,6 +33,7 @@ h1 {
 h2 {
   margin-top: 80px;
   font-size: 80px;
+  text-align: center;
 }
 
 h3 {
@@ -97,16 +98,20 @@ h4 {
 }
 
 hr {
-  border: 1px solid #42B132;
+  border: 2px solid #42B132;
   width: 100%;
 }
 
 .left-side {
-  border-right: 3px solid #FCD000;
+  border-right: 4px solid #42B132;
+}
+
+.side-bar {
+  width: 250px;
 }
 
 .right-side-bar {
-  border-left:3px solid #42B132;
+  border-left:4px solid #42B132;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -131,6 +136,16 @@ hr {
 .game-board-pieces .player-icons {
   width: 100%;
   height: 100%;
+}
+
+.bowgif {
+  height: 25%;
+  width: 75%;
+}
+
+.margif {
+  height: 25%;
+  width: 75%;
 }
 
 button {
