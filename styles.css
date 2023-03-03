@@ -33,6 +33,7 @@ h1 {
 h2 {
   margin-top: 80px;
   font-size: 80px;
+  text-align: center;
 }
 
 h3 {
@@ -103,6 +104,10 @@ hr {
 
 .left-side {
   border-right: 4px solid #42B132;
+}
+
+.side-bar {
+  width: 250px;
 }
 
 .right-side-bar {

@@ -79,7 +79,7 @@ function startGame() {
 }
 
 function bannerChangeTurns() {
-  header.innerHTML = `${game.currentPlayer.name}'s Turn!`
+  header.innerHTML = `${game.currentPlayer.name}'s Turn!`;
 }
 
 function boardChangeGameState() {
@@ -117,8 +117,8 @@ function boardChangeGameState() {
     header.classList.remove("hidden");
     winner.classList.add("hidden")
     gameBoardWrapper.classList.remove("hidden");
-    bannerChangeTurns();
     game.resetGame();
+    bannerChangeTurns();
   }
 
 
