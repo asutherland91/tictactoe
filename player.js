@@ -3,10 +3,13 @@ class Player {
     this.name = name;
     this.id = Date.now();
     this.token = token;
-    this.wins = 0;
+    
+    var savedWins = window.localStorage.getItem(name) || 0;
+    this.wins = parseInt(savedWins);
   }
 
   increaseWins() {
     this.wins++;
+    window.localStorage.setItem(this.name, this.wins);
   }
 }

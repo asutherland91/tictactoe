@@ -1,7 +1,7 @@
 # Super Tic Tac Toe
 
 ## Abstract:
-Tic-tac-toe is a common two player game played On a 3 x 3 grid, traditionally using X and O's as the markers. It is most often played during childhood. Super tic-tac-toe is my application, a Super Mario themed tic-tac-toe game. In Super tic-tac-toe you first enter your name and then you are can choose from four different characters each for player one and player two. After you click the “Lets A Go” button the game begins, allowing in alternating turns, with the banner above the game board telling you whose turn it is, to place the icon each player selected. On a win the winner's score will tick up by one, and on both a win and a draw the game will reset so you can play again.
+Tic-tac-toe is a common two player game played On a 3 x 3 grid, traditionally using X and O's as the markers. It is most often played during childhood. Super tic-tac-toe is my application, a Super Mario themed tic-tac-toe game. In Super tic-tac-toe you first enter your name and then you are can choose from four different characters each for player one and player two. After you click the “Lets A Go” button the game begins, allowing in alternating turns, with the banner above the game board telling you whose turn it is, to place the icon each player selected. On a win the winner's score will tick up by one, and on both a win and a draw the game will reset so you can play again. This game also utilizes local storage to save each player's score by their name.
 <br>
 <br>
 ## Installation Instructions:
@@ -28,7 +28,7 @@ Tic-tac-toe is a common two player game played On a 3 x 3 grid, traditionally us
 <br>
 ## Context:
 
-This project was completed as Turing School of Software and Design’s final solo project for module one. This project is one of the steps expected to demonstrate that we are ready to advance to module two. Tic-tac-toe is our first project that we have built entirely from the ground up alone from the planning stage through completion.
+This project was completed as Turing School of Software and Design’s final solo project for module one. This project is one of the steps expected to demonstrate that we are ready to advance to module two. Tic-tac-toe is our first project that we have built entirely from the ground up alone from the planning stage through completion. This project took me about 20 hours. 
 <br>
 <br>
 ## Contributors:
