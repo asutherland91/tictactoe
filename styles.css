@@ -141,6 +141,7 @@ hr {
 .bowgif {
   height: 25%;
   width: 75%;
+  transform: scaleX(-1);
 }
 
 .margif {
