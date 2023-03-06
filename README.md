@@ -23,7 +23,7 @@ Tic-tac-toe is a common two player game played On a 3 x 3 grid, traditionally us
 <br>
 <br>
 ## Preview of App:
-~Make a gif~
+![app preview](assets/example.gif)
 <br>
 <br>
 ## Context:
