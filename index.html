@@ -8,75 +8,75 @@
     <script src="./game.js"></script>
   </head>
   <body>
-    <section class="wrapper">
+    <section class="background-overlay">
       <section class="side-bar left-side">
-        <h3 class="name-one">Player 1</h3>
-        <h4 class="score-one">Player 1 score</h4>
+        <h3 class="name-one player-name-header">Player 1</h3>
+        <h4 class="score-one player-score-header">Player 1 score</h4>
         <hr class="solid">
         <form class="selection-section">
           <input type="text" class="name-input" id="name-input1" placeholder="Enter your name">
           <div class="radio-section">
-            <input type="radio" class="radio-one" id="mario" name="player-piece-1" value="assets/Mario.png">
+            <input type="radio" class="player-one-option" id="mario" name="player-piece-1" value="assets/Mario.png">
             <label for="mario"><img class="player-icons" src="assets/Mario.png" alt="Mario"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" class="radio-one"  id="luigi" name="player-piece-1" value="assets/Luigi.webp">
+            <input type="radio" class="player-one-option"  id="luigi" name="player-piece-1" value="assets/Luigi.webp">
             <label for="luigi"><img class="player-icons" src="assets/Luigi.webp" alt="Luigi"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" class="radio-one"  id="peach" name="player-piece-1" value="assets/Peach.png">
+            <input type="radio" class="player-one-option"  id="peach" name="player-piece-1" value="assets/Peach.png">
             <label for="peach"><img class="player-icons" src="assets/Peach.png" alt="Peach"/></label>
-        </div>
-        <div class="radio-section">
-            <input type="radio" class="radio-one"  id="yoshi" name="player-piece-1" value="assets/Yoshi.png">
+          </div>
+          <div class="radio-section">
+            <input type="radio" class="player-one-option"  id="yoshi" name="player-piece-1" value="assets/Yoshi.png">
             <label for="yoshi"><img class="player-icons" src="assets/Yoshi.png" alt="Yoshi"/></label>
-          </div> 
+          </div>
           <button disabled class="submit-1">LET'S A GO!</button>
         </form>
-          <img class="margif hidden" src="assets/margif.gif">
+        <img class="mario-gif hidden" src="assets/margif.gif" alt="Mario gif">
       </section>
       <section class="middle-section">
         <img class="super-header" src="assets/Supertictactoe.png" alt="Super Tic Tac Toe"/>
         <h1 class="hidden">Player's Turn!</h1>
         <section class="game-board-section hidden">
-            <div class="left-1 game-board-pieces" id="spot-0"></div>
-            <div class="mid-1 game-board-pieces" id="spot-1"></div>
-            <div class="right-1 game-board-pieces" id="spot-2"></div>
-            <div class="left-2 game-board-pieces" id="spot-3"></div>
-            <div class="mid-2 game-board-pieces" id="spot-4"></div>
-            <div class="right-2 game-board-pieces" id="spot-5"></div>
-            <div class="left-3 game-board-pieces" id="spot-6"></div>
-            <div class="mid-3 game-board-pieces" id="spot-7"></div>
-            <div class="right-3 game-board-pieces" id="spot-8"></div>
+          <div class="left-1 game-board-piece" id="spot-0"></div>
+          <div class="mid-1 game-board-piece" id="spot-1"></div>
+          <div class="right-1 game-board-piece" id="spot-2"></div>
+          <div class="left-2 game-board-piece" id="spot-3"></div>
+          <div class="mid-2 game-board-piece" id="spot-4"></div>
+          <div class="right-2 game-board-piece" id="spot-5"></div>
+          <div class="left-3 game-board-piece" id="spot-6"></div>
+          <div class="mid-3 game-board-piece" id="spot-7"></div>
+          <div class="right-3 game-board-piece" id="spot-8"></div>
         </section>
-        <h2 class="player-won">Please choose a player!</h2>
-        <img class="winner hidden" src="assets/winner.gif">
+        <h2 class="announcement-header">Please choose a player!</h2>
+        <img class="winner hidden" src="assets/winner.gif" alt="Warp pipe winner gif">
       </section>
       <section class="side-bar right-side-bar">
-        <h3 class="name-two">Player 2</h3>
-        <h4 class="score-two">Player 2 score</h4>
+        <h3 class="name-two player-name-header">Player 2</h3>
+        <h4 class="score-two player-score-header">Player 2 score</h4>
         <hr class="solid>">
         <form class="selection-section right-side">
           <input type="text" class="name-input" id="name-input2" placeholder="Enter your name">
           <div class="radio-section">
-            <input type="radio" class="radio-two" id="bowser" name="player-piece-2" value="assets/Bowser.webp">
+            <input type="radio" class="player-two-option" id="bowser" name="player-piece-2" value="assets/Bowser.webp">
             <label for="bowser"><img class="player-icons" src="assets/Bowser.webp" alt="Bowser"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" class="radio-two" id="boo" name="player-piece-2" value="assets/Boo.webp">
+            <input type="radio" class="player-two-option" id="boo" name="player-piece-2" value="assets/Boo.webp">
             <label for="boo"><img class="player-icons" src="assets/Boo.webp" alt="Boo"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" class="radio-two" id="goomba" name="player-piece-2" value="assets/Goomba.png">
+            <input type="radio" class="player-two-option" id="goomba" name="player-piece-2" value="assets/Goomba.png">
             <label for="goomba"><img class="player-icons" src="assets/Goomba.png" alt="Goomba"/></label>
           </div>
           <div class="radio-section">
-            <input type="radio" class="radio-two" id="spiny" name="player-piece-2" value="assets/Spiny.png">
+            <input type="radio" class="player-two-option" id="spiny" name="player-piece-2" value="assets/Spiny.png">
             <label for="spiny"><img class="player-icons" src="assets/Spiny.png" alt="Spiny"/></label>
-           </div> 
+          </div>
           <button disabled class="submit-2">LET'S A GO!</button>
         </form>
-          <img class="bowgif hidden" src="assets/bowgif.gif">
+        <img class="bowser-gif hidden" src="assets/bowgif.gif" alt="Bowser gif">
       </section>
     </section>
     <script src="./main.js"></script>

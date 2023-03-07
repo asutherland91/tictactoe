@@ -1,8 +1,3 @@
-/* colors
-#42B132 - green
-#E4000F - red
-#FCD000 - yellow */
-
 *{
 margin: 0;
 margin-block-start: 0px;
@@ -17,7 +12,7 @@ body {
   text-shadow: 3px 3px 3px #E4000F ;
 }
 
-.wrapper {
+.background-overlay {
   background-color: rgba(255,255,255,.5);
   display: flex;
   justify-content: space-between;
@@ -25,23 +20,24 @@ body {
   height: 100vh;
 }
 
+/* text */
 h1 {
   font-size: 50px;
   margin-top: 40px;
 }
 
-h2 {
+.announcement-header {
   margin-top: 80px;
   font-size: 80px;
   text-align: center;
 }
 
-h3 {
+.player-name-header {
   font-size: 42px;
   padding: 10px;
 }
 
-h4 {
+.player-score-header {
   font-size: 32px;
   padding:10px;
 }
@@ -65,7 +61,7 @@ h4 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.game-board-pieces {
+.game-board-piece {
   border: 4px solid #E4000F;
   height: 150px;
   width: 150px;
@@ -133,18 +129,18 @@ hr {
   height: 100%;
 }
 
-.game-board-pieces .player-icons {
+.game-board-piece .player-icons {
   width: 100%;
   height: 100%;
 }
 
-.bowgif {
+.bowser-gif {
   height: 25%;
   width: 75%;
   transform: scaleX(-1);
 }
 
-.margif {
+.mario-gif {
   height: 25%;
   width: 75%;
 }

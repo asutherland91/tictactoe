@@ -10,11 +10,6 @@ class Game {
     this.turn = 0;
   }
 
-  // I'll need this if I make a reset button;
-  // whoseTurn() {
-    
-  // }
-
   resetGame() {
     if(this.gameWon||this.gameDraw) {
       this.gameWon = false;

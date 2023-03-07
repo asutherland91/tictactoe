@@ -3,19 +3,19 @@ var nameInputOne = document.querySelector("#name-input1");
 var nameInputTwo = document.querySelector("#name-input2");
 var letsGoButtonOne = document.querySelector(".submit-1");
 var letsGoButtonTwo = document.querySelector(".submit-2");
-var radioOne = document.querySelectorAll(".radio-one");
-var radioTwo = document.querySelectorAll(".radio-two");
+var playerOneOptions = document.querySelectorAll(".player-one-option");
+var playerTwoOptions = document.querySelectorAll(".player-two-option");
 var nameOne = document.querySelector(".name-one");
 var scoreOne = document.querySelector(".score-one");
 var nameTwo = document.querySelector(".name-two");
 var scoreTwo = document.querySelector(".score-two");
 var gameBoardWrapper = document.querySelector(".game-board-section")
-var gameBoard = document.querySelectorAll(".game-board-pieces");
+var gameBoard = document.querySelectorAll(".game-board-piece");
 var header = document.querySelector("h1");
 var gameResult = document.querySelector("h2");
 var selectionSection = document.querySelectorAll(".selection-section")
-var marioGif = document.querySelector(".margif");
-var bowserGif = document.querySelector(".bowgif");
+var marioGif = document.querySelector(".mario-gif");
+var bowserGif = document.querySelector(".bowser-gif");
 var winner = document.querySelector(".winner");
 
 //event listeners
@@ -23,11 +23,11 @@ nameInputOne.addEventListener("keyup", enableOneButton);
 nameInputTwo.addEventListener("keyup", enableTwoButton);
 letsGoButtonOne.addEventListener("click", setUpPlayer);
 letsGoButtonTwo.addEventListener("click", setUpPlayer);
-for(var i = 0; i < radioOne.length; i++) {
-  radioOne[i].addEventListener("click", enableOneButton);
+for(var i = 0; i < playerOneOptions.length; i++) {
+  playerOneOptions[i].addEventListener("click", enableOneButton);
 }
-for(var i = 0; i < radioTwo.length; i++) {
-  radioTwo[i].addEventListener("click", enableTwoButton);
+for(var i = 0; i < playerTwoOptions.length; i++) {
+  playerTwoOptions[i].addEventListener("click", enableTwoButton);
 }
 for(var i = 0; i < gameBoard.length; i++) {
   gameBoard[i].addEventListener("click", placeIcon);
@@ -109,7 +109,7 @@ function boardChangeGameState() {
 }
 
   function resetGameBoard() {
-    var icons = document.querySelectorAll(".game-board-pieces .player-icons");
+    var icons = document.querySelectorAll(".game-board-piece .player-icons");
     for(var i = 0; i < icons.length; i++ ) {
       icons[i].remove();
     }
@@ -124,7 +124,7 @@ function boardChangeGameState() {
 
 function placeIcon(event) {
   if(game) {
-    var spot = event.target.closest(".game-board-pieces").id[5];
+    var spot = event.target.closest(".game-board-piece").id[5];
     var legalTurn = game.takeTurn(spot);
     if(legalTurn) {
       event.target.innerHTML = `<img class="player-icons" src="${game.currentPlayer.token}" alt="${game.currentPlayer.name}'s piece"/>`
