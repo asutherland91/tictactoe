@@ -18,14 +18,14 @@ Tic-tac-toe is a common two player game played On a 3 x 3 grid, traditionally us
 - Enter the created directory.
 - Run the command "open index.html" in the terminal. The webpage will appear.
 
-### To View the Project - Option 2: Via the GitHub Pages Deployment
-- Visit the GitHub Pages deployment link. [ADD LINK HERE]
 <br>
 <br>
+
 ## Preview of App:
 ![app preview](assets/example.gif)
 <br>
 <br>
+
 ## Context:
 
 This project was completed as Turing School of Software and Design’s final solo project for module one. This project is one of the steps expected to demonstrate that we are ready to advance to module two. Tic-tac-toe is our first project that we have built entirely from the ground up alone from the planning stage through completion. This project took me about 20 hours. 
