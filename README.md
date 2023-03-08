@@ -18,6 +18,9 @@ Tic-tac-toe is a common two player game played On a 3 x 3 grid, traditionally us
 - Enter the created directory.
 - Run the command "open index.html" in the terminal. The webpage will appear.
 
+### To View the Project - Option 2: Via the GitHub Pages Deployment
+- Visit the [GitHub Pages deployment link.](https://asutherland91.github.io/tictactoe/)
+
 <br>
 <br>
 
